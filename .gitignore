@@ -31,7 +31,3 @@
 *.out
 *.app
 
-# Folder
-build/
-.DS_Store
-
