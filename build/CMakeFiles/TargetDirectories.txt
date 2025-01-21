@@ -1,0 +1,5 @@
+/Users/dtertre59/Documents/Projects/Work_Projects/Material_Detector_Machine/control-system/build/CMakeFiles/edit_cache.dir
+/Users/dtertre59/Documents/Projects/Work_Projects/Material_Detector_Machine/control-system/build/CMakeFiles/rebuild_cache.dir
+/Users/dtertre59/Documents/Projects/Work_Projects/Material_Detector_Machine/control-system/build/src/CMakeFiles/main.dir
+/Users/dtertre59/Documents/Projects/Work_Projects/Material_Detector_Machine/control-system/build/src/CMakeFiles/edit_cache.dir
+/Users/dtertre59/Documents/Projects/Work_Projects/Material_Detector_Machine/control-system/build/src/CMakeFiles/rebuild_cache.dir
