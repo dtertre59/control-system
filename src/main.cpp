@@ -10,6 +10,6 @@ int main() {
     client.send(message_data);
     vector<uint8_t> data;
     client.receive(data, 15); // falla si recibe menos de 15 bytes
-    // client.close();
+    client.close();
     return 0;
 }
