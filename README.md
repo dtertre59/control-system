@@ -18,7 +18,7 @@
 
 - Variables locales: camelCase
 - Atributos de las clases (miembros privados): _camelCase
-- Metodos de las clases: PascalCase
+- Metodos de las clases: camelCase
 - Constantes: UPPER_SNAKE_CASE
 - Parametros de funciones: camelCase
 - Clases: PascalCase
@@ -37,4 +37,4 @@
 - Si no estivo se puede activar con: sudo systemctl start pigpiod
 - Si quieres que se active cuando se enciende el ordenador: sudo systemctl enable pigpiod
 
-Para el primer programa es bnecesario que este deshabilitado.
+Para el primer programa es necesario que este deshabilitado.

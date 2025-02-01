@@ -3,7 +3,7 @@
 /*
 * Conexion con un Pin GPIO de la raspberry pi
 * Se utiliza la libreria pigpio
-* Para que funcione correctamente es necesario que no este corriendo el demonio pigpiod.
+* Para que funcione correctamente es necesario que NO este corriendo el demonio pigpiod.
 */
 
 #include <iostream>

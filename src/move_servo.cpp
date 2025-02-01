@@ -10,7 +10,7 @@
 #include <iostream>
 #include <pigpiod_if2.h>
 #include <thread>
-# include <unistd.h>    // for sleep()
+#include <unistd.h>    // for sleep()
 
 using namespace std;
 
@@ -32,18 +32,19 @@ int main() {
 
 
     // Define Pins
-    int SERVO_PIN = 26;
+    int SERVO_PIN = 13;
     int angle;
 
     cout << "Configuring servo on " << SERVO_PIN << endl;
     
     set_mode(gpioHandle, SERVO_PIN, PI_OUTPUT);
 
-    while True {
+    while (true) {
         cout << "Set angle: ";
         cin >> angle;
 
-        if (angle < 0 || angle > 180) {
+        // 500 = -90 and 2500 = 90 -> 1500 = 0
+        if (angle < 0 || angle > 2500) {
             cout << "Invalid angle" << endl;
             continue;
         }

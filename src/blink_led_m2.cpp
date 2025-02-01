@@ -2,7 +2,8 @@
 
 /*
 * Conexion con un Pin GPIO de la raspberry pi
-* Se utiliza la libreria pigpio , el modulo pigpiod_if2 el cual nos permite conectarnos al proceso demonio (que debe estar funcionando previameinte)
+* Se utiliza la libreria pigpio , el modulo pigpiod_if2 el cual nos permite conectarnos al proceso demonio (que debe estar funcionando previamente)
+* Comando para encender el proceso demonio: sudo systemctl start pigpiod
 * Esto habilita la posibilidad de connectarnos por red a otros daemons. En el start se configura la ip y el port
 * Como estamos en local lo hemos dejado en nullptr
 */
