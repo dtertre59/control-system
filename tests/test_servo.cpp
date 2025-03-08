@@ -3,13 +3,30 @@
 
 using namespace std;
 
-int main() {
+int main(int argc, char* argv[]) {
+    bool t_value = false;
+
+    for (int i = 0; i < argc; i++){
+        string arg = argv[i];
+        if (arg == "-t") {
+            t_value = true;
+            break;
+        }
+    }
+
     Servo servo(13);
 
     servo.init();
 
+    // Trim
+    if (t_value) {
+        servo.trim();
+        return 0;
+    }
+
+    // Normal mode
+
     servo.setPulseWidth(2500);
-    servo.trim();
     
     int angle = servo.getAngle();
     cout << "Angle: " << angle << endl;
