@@ -7,7 +7,7 @@
 #define PORT 5007
 #define INTERFACE "127.0.0.1"
 
-#define PIN 18 // Pin GPIO 18
+#define PIN 13 // Pin GPIO 13
 #define TRIM 0 // Trim 0
 
 
@@ -18,12 +18,12 @@ typedef struct {
 
 
 void worker(Coordinator* c, int state, int timestamp) {
-
+    sleep(1);
     if (state == 1) {
         // Move servo to position 1
         c->_servo.setPulseWidth(1800);
     } else {
-        c->_servo.setPulseWidth(1000);
+        c->_servo.setPulseWidth(1200);
     }
 
     std::cout << "Worker thread move servo to  " << c->_servo.getPulseWith() << " DONE" << std::endl;
@@ -40,7 +40,7 @@ Coordinator::Coordinator(): _udp_multicast_client(ADDR, PORT, INTERFACE),
 
 
 Coordinator::~Coordinator() {
-
+    _servo.close();
 }
 
 
@@ -60,6 +60,8 @@ bool Coordinator::run() {
     // Recibir datos
     vector<uint8_t> data;
     Piece p;
+
+    _servo.setPulseWidth(1200);
 
     while (true) {
         std::cout << "Esperando datos..." << std::endl;

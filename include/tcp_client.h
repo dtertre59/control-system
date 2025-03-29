@@ -7,6 +7,7 @@
 #include <sys/socket.h> // Para el socket y las funciones relacionadas
 #include <netinet/in.h> // Para las funciones relacionadas con las direcciones
 #include <arpa/inet.h>  // Para inet_pton
+#include <vector>
 
 using namespace std;
 
