@@ -9,10 +9,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED YES)
 project(Control_system)
 
 # Sets
-set(PROJECT_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/include)
-set(PROJECT_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
+set(HEADERS_DIR ${PROJECT_SOURCE_DIR}/include)
+set(SOURCE_DIR ${PROJECT_SOURCE_DIR}/src)
 
 
 # Add subdirectories
-add_subdirectory("${PROJECT_SOURCE_DIR}")
+add_subdirectory("${SOURCE_DIR}")
 # add_subdirectory("tests")

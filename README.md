@@ -6,7 +6,7 @@
 - make
 - cmake
 
-## Create
+## Create, Build and run project
 
 - mkdir build
 - cd build
@@ -30,7 +30,7 @@
 # Libreria utizada para la interaccion cobn los pines gpio de la Raspberrry PI
 
 - pigpio
-- Viene instalada en el sistema.
+- Viene instalada en el sistema (RPi).
 - Para comprobar si esta instalada: dpkg -s pigpio
 - Comando para instalar la libreria: sudo apt install pigpio
 - Verificar si el servicio esta en funcionamiento (proceso demonio): sudo systemctl status pigpiod

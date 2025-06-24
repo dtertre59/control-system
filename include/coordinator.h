@@ -6,9 +6,14 @@
 #include <cstdlib>
 
 #include "udp_multicast_client.h"
-#include "servo.h"
-// #include "servo_fk.h"
 
+#ifdef __linux__
+    #include "servo.h"
+#elif  defined(__APPLE__)
+    #include "servo_fk.h"
+#else
+    #error "Unsupported platform. Please implement the Servo class for your platform."
+#endif
 
 class Coordinator {
     public:

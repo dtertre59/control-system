@@ -68,6 +68,8 @@
         "print": "cpp",
         "queue": "cpp",
         "stack": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
+        "charconv": "cpp",
+        "forward_list": "cpp"
     }
 }

@@ -8,8 +8,12 @@
 using namespace std;
 
 /*
-* Servo class
+* Servo FAKE class
+
+This class simulates a servo motor using a fake implementation.
+
 */
+
 class Servo {
 
     public:

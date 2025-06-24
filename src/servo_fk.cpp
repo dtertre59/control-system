@@ -16,7 +16,7 @@ Servo::~Servo() {
 
 int Servo::init() {
 
-    cout << "---------- Init FAKE Servo ----------\n" << endl;
+    cout << "\n---------- Init FAKE Servo ----------\n" << endl;
 
     cout << "Connecting to FAKE pigpio daemon ... ";
 
