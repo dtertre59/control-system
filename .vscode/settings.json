@@ -70,6 +70,7 @@
         "stack": "cpp",
         "variant": "cpp",
         "charconv": "cpp",
-        "forward_list": "cpp"
+        "forward_list": "cpp",
+        "chrono": "cpp"
     }
 }

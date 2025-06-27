@@ -11,7 +11,8 @@
 #define PIN 13 // Pin GPIO 13
 #define TRIM 0 // Trim 0
 
-#define ACTUATOR_DISTANCE_MM 10
+#define ACTUATOR_DISTANCE_MM 275
+#define ACTUATOR_DELAY_MS 250
 
 // typedef enum{
 //     COPPER = 0,
@@ -39,7 +40,8 @@ typedef struct {
 
 int calculateTimems(unsigned long init_timestamp_ms, float speed){
 
-    float total_sleep_time_ms = (ACTUATOR_DISTANCE_MM / speed) * 1000.0f; // ms
+    float total_sleep_time_ms = (ACTUATOR_DISTANCE_MM / speed) * 1000.0f; // SPEED = mm/s -> s
+    // std::cout << ACTUATOR_DISTANCE_MM << " " << speed << " Total time in ms: " << total_sleep_time_ms << std::endl;
 
     // Convert the init_timestamp (in ms) to a time_point
     chrono::system_clock::time_point init_time = chrono::system_clock::time_point(chrono::milliseconds(init_timestamp_ms));
@@ -54,7 +56,7 @@ int calculateTimems(unsigned long init_timestamp_ms, float speed){
     // chrono::microseconds fix_duration_us = chrono::duration_cast<chrono::microseconds>(time_now - init_time);
     // std::cout << "Fix duration in us: " << fix_duration_us.count() << std::endl;
 
-    int fixed_total_sleep_time_ms = static_cast<int>(total_sleep_time_ms) - fix_duration.count();
+    int fixed_total_sleep_time_ms = static_cast<int>(total_sleep_time_ms) - fix_duration.count() - ACTUATOR_DELAY_MS;
     // std::cout << "Fixed total sleep time in ms: " << fixed_total_sleep_time_ms << std::endl;
 
     return fixed_total_sleep_time_ms;

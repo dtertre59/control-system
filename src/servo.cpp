@@ -94,7 +94,7 @@ int Servo::setPulseWidth(int pulseWidth) {
     set_servo_pulsewidth(_gpioHandle, _pin, pulseWidth);
 
     // wait estimated time
-    sleep(1); // 500 -> 2500 time
+    sleep(0.5); // 500 -> 2500 time
 
     cout << "SUCCESS" << endl;
 
